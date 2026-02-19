@@ -1,0 +1,9 @@
+# build
+build/
+
+## Project files
+.venv
+.idea/
+.DS_Store
+.env
+.vscode/
