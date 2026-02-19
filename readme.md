@@ -54,7 +54,7 @@
 # Клонирование репозитория
 git clone https://github.com/Alexteplov/frequency_words
 cd frequency_words
-
+```
 ## Доступные команды 
 
 | Команда | Описание |
