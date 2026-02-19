@@ -7,11 +7,11 @@ GO=go
 # Определяем ОС
 ifeq ($(OS),Windows_NT)
     DETECTED_OS := Windows
-    RM=del /q /f
+    RM=del /q /f /s build\*.* >nul & for /d /r build %i in (*) do rd /s /q "%i"
     EXEC=$(BUILD_FULDER)/$(BINARY_NAME).exe
 else
     DETECTED_OS := $(shell uname)
-    RM=rm -f
+    RM="rm -rf" && $RM build/* build/.* 2>/dev/null || true
     EXEC=$(BUILD_FULDER)/./$(BINARY_NAME)
 endif
 
